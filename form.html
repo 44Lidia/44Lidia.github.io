@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>简历</title>
+    <link rel="stylesheet" href="mvp.css">
+</head>
+<body>
+    <style>
+        #sel:hover{
+            color:blueviolet
+        }
+
+    </style>
+    <form action="" method="post" id="fromlist" >
+        昵称：<input type="text" placeholder="请输入您的昵称" ><br>
+        密码：<input type="password" placeholder="请输入您的密码"><br>
+        邮箱：<input type="text" placeholder="请输入您的邮箱" ><select name="sel" id="sel">
+            <option value="1">qq.com</option>
+            <option value="1">163.com</option>
+            <option value="1">126.com</option>
+            <option value="1">outlook.com</option>
+            <option value="1">我没有邮箱.com</option>
+        </select><br>
+        性别：<input type="radio" name="1" >male<input type="radio" name="1"  checked>female
+        爱好：<input type="checkbox">旅游<input type="checkbox">摄影<input type="checkbox">运动<br>
+        个人简介:<br>
+        <textarea cols="30" rows="10"></textarea><br>
+        file:<input type="file"><br>
+        <input type="submit" value="提交">
+    </form>
+    <a href="index.html">回去第一个页面</a>
+</body>
+</html>
