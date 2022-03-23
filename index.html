@@ -10,10 +10,10 @@
     padding: 0;
     margin: 0 ;
 }
-
 a {
     text-decoration: none;
     color: #f5f1eb;
+    font-size: medium;
 }
 
 h1 {
@@ -50,30 +50,44 @@ h3{
     margin: 0 auto;
     padding: 10px 20px;
     margin-top: 0;
-    background-image: url("bg3.jpg");
+    background-image: url("cbg.jpg");
     box-shadow: 5px 5px 5px #6d6969;
 }
 .theimg{
     text-align: center;
+}
+.little{
+  height:50px;
+  width:50px;
+  z-index:99999;
+  border-radius: 50%;
+  background-image: url("little.jpg");
+  position: absolute;
+  top:150px;
+  left:700px;
+  position: fixed;
 }
     </style>
   </head>
 
   <body>
     <div class="container">
-      <h1>点我我会动</h1>
-      <div class="dt">
+      <h1 id="head">点我我会动</h1>
+      <div class="dt" id="img">
         <img src="qc.jpg" width="200px" />
       </div>
       <h4>
-        <a href="form.html">表单链接</a> |
+        <a href="form.html">表单链接</a>
       </h4>
+      <h5>
+        <a href="还原学校网页布局.html">还原学校官网布局</a>
+      </h5>
       <hr />
       <ul>
         <li style="font-size: large;color:#817f78"><b>性别：</b>女</li>
         <li style="font-size: large;color:#817f78">
           <b style="font-size: large;color:#817f78">电话：</b>
-          <a href="https://1174256.1024sj.com/" target="_blank">4025252</a>
+          <a href="http://www.scdc.sh.cn/" target="_blank">4025252</a>
         </li>
         <li style="font-size: large;color:#817f78">
             <b style="font-size: large;color:#817f78">邮箱：</b>
@@ -84,24 +98,26 @@ h3{
       </ul>
       <hr />
       <h3>教育背景Education</h3>
-      <table style="width:100%">
-        <tr>
-          <td>时间</td>
-          <td>学校</td>
-          <td>职务</td>
-        </tr>
-        <tr>
-          <td>2020-2024</td>
-          <td>小破贸</td>
-          <td>勤勤恳恳的大学生</td>
-        </tr>
-        <tr>
-          <td>2024-....</td>
-          <td>家里蹲大学</td>
-          <td>社畜</td>
-        </tr>
-      </table>
-
+      <div class="tablebox">
+        <table style="width:100%">
+          <tr>
+            <td>时间</td>
+            <td>学校</td>
+            <td>职务</td>
+          </tr>
+          <tr>
+            <td>2020-2024</td>
+            <td>小破贸</td>
+            <td>勤勤恳恳的大学生</td>
+          </tr>
+          <tr>
+            <td>2024-....</td>
+            <td>家里蹲大学</td>
+            <td>社畜</td>
+          </tr>
+        </table>  
+      </div>
+      
       <h3>工作经验...</h3>
       <ol>
         <li style="font-size: larger;color:#cac9c3">本人已经成功安装搭建好visual studio code,Java SE,MySQL等软件</li>
@@ -118,6 +134,9 @@ h3{
         这是一个平平无奇的简历
         <br />谢谢观看
       </p>
+    </div>
+    <div class="little">
+
     </div>
   </body>
 </html>

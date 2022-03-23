@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>还原学校官网布局</title>
+</head>
+<style>
+body{
+    margin: 0;
+    padding: 0;
+}
+.page1{
+    display:flex;
+    background-color: rgb(243, 21, 21);
+    height:600px;
+    width: 100%;
+    margin: 0 auto;
+    font-size:50px;
+    text-align: center;
+}
+.page1 .fmitem{
+    float:bottom;
+    background-color:rgb(38, 161, 199) ;
+    width:400px;
+    height:30px;
+    margin: 10px;
+    font-size: medium;
+    align-self: flex-end;
+    text-align: center;
+}
+.headerstill:hover{
+    background-color: rgb(153, 204, 248);
+    width:400px;
+    height:60px;
+}
+#fx{
+    position: fixed;
+    background-color: rgb(85, 134, 238);
+    width:100%;
+    height: 40px;
+    text-align: center;
+    overflow: hidden;
+    z-index: 99999;
+    font-size: 30px;
+}
+.page2{
+    display: flex;
+    background-color: antiquewhite;
+    flex-wrap: wrap;
+    justify-content:center;
+}
+.page2 .item{
+    background-color:rgb(54, 228, 228) ;
+    height:350px;
+    width:620px;
+    margin: 10px;
+}
+#small{
+    width: 300px;
+}
+.page3{
+   display: flex;
+    background-color: aliceblue;
+    justify-content: center;
+} 
+.page3 .page31{
+    display:flex ;
+    background-color: rgb(204, 204, 187);
+    justify-content: left;
+    float: left;
+    flex-direction: column;
+}
+.page3 .page31 .item{
+    background-color: rgb(233, 177, 214);
+    width:600px;
+    height: 40px;
+    margin: 15px;
+}
+.page3 .page32{
+    display:flex ;
+    background-color: rgb(204, 204, 187);
+    justify-content: left;
+    float: right;
+    flex-direction: column;
+}
+.page3 .page32 .item{
+    background-color: rgb(233, 177, 214);
+    width:600px;
+    height: 40px;
+    margin: 15px;
+}
+.page4{
+    background-color: bisque;
+    display: flex;
+    justify-content:center;
+}
+.page4 .page41{
+    background-color: rgb(236, 184, 228);
+    float:left;
+    display: flex;
+    flex-direction: column;
+    margin: 15px;
+}
+.page4 .page41 .item{
+    background-color: rgb(212, 110, 110);
+    width:300px;
+    height:40px;
+    margin: 20px;
+}
+.page4 .page42{
+    background-color: rgb(142, 243, 243);
+    width:500px;
+    height:450px;
+    margin: 25px;
+}
+.page42 .page421
+{
+    background-color:rgb(212, 110, 110) ;
+    width:300px;
+    height:400px;
+    margin: 0 auto;
+}
+.page4 .page43{
+    display: flex;
+    float:right;
+    justify-content: center;
+    background-color: rgb(245, 234, 135);
+    width:400px;
+    height:450px;
+    margin: 20px;
+}
+。page4 .page43 .p4{
+    position: relative;
+    top:20px;
+}
+.page43 .page431 .item{
+    background-color: rgb(233, 177, 214);
+    width:150px;
+    height: 50px;
+    margin: 20px;
+}
+.page43 .page432 .item{
+    background-color: rgb(233, 177, 214);
+    width:150px;
+    height: 50px;
+    margin: 20px;
+}
+.footer{
+    background-color: rgb(76, 76, 212);
+    width:100%;
+    height:200px;
+}
+</style>
+<body>
+    <div class="headerstill" id="fx">SUIBE</div>
+
+    <div class="page1">
+        <div class="fmitem">校园要闻</div>
+        <div class="fmitem">新闻快讯</div>
+        <div class="fmitem">媒体报道</div>
+        <div class="fmitem">专题网站</div>
+        <div class="fmitem">精彩影像</div>
+    </div>
+
+    <h1 style="text-align: center;">校园要闻</h1>
+        <div class="page2">
+            <div class="item" ></div>
+            <div class="item" id="small"></div>
+            <div class="item" id="small" ></div>
+            <div class="item" id="small"></div>
+            <div class="item" id="small" ></div>
+            <div class="item" ></div>
+        </div>
+
+        <div class="page3">
+            <div class="page31">
+                <h21 style="text-align: center; font-size: 30px;">新闻快讯</h21>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+            </div>
+            <div class="page32">
+                <h21 style="text-align: center;font-size: 30px;">媒体报道</h21>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+            </div>
+        </div>
+        
+        <div class="page4">
+            <div class="page41">
+                <h41 style="text-align: center;font-size: 30px;">科研动态</h41>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+            </div>
+            <div class="page42">
+                <h42 style="text-align:center; font-size: 30px; position: relative;left: 200px;">精彩影像</h42>
+                <div class="page421"></div>
+            </div>
+            <div class="page43">
+               <h43 style="text-align:center; font-size: 30px; position: relative;left: 200px;">专家网站</h43>
+                <div class="page431">
+                    <div class="item"></div>
+                    <div class="item"></div>
+                    <div class="item"></div>
+                    <div class="item"></div>
+                    <div class="item"></div>
+                    <div class="item"></div>
+                </div>
+                <div class="page432">
+                    <div class="item"></div>
+                    <div class="item"></div>
+                    <div class="item"></div>
+                    <div class="item"></div>
+                    <div class="item"></div>
+                    <div class="item"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+
+        </div>
+</body>
+</html>
