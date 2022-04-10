@@ -81,14 +81,14 @@
     }
     .left{
         width: 540px;
-        height:960px;
+        height:950px;
         background-color: rgb(43, 13, 18);
         opacity: 0.5;
         margin: 10px;
     }
     .right{
-        width: 540px;
-        height:960px;
+        width: 510px;
+        height:950px;
         background-color: rgb(218, 173, 199);
         opacity: 0.5;
         margin: 10px;
@@ -102,7 +102,7 @@
         background-image:url("p2hl.png");
         height:200px;
         border-radius:0;
-        transition: 3s;
+        transition: 2s;
     }
     .self{
         height:50px;
@@ -123,16 +123,11 @@
         width:5px;
         font-size: large;
     }
-    .selfcon:hover{
-        font-size: larger;
-        transition: 4s;
-        width:10px;
-        text-align: left;
-    }
+    
     .selfif{
         width:450px;
         height:40px;
-        margin: 20px;
+        margin: 60px 20px 20px;
         background-color:rgb(26, 35, 41);
         color: rgb(245, 237, 237);
         font-size: 30px;
@@ -144,14 +139,28 @@
         text-align: left;
     }
     .tail{
-        background-color: rgb(231, 204, 216);
+        background-image: url("page2bg.jpg");
         width: 1080px;
         height:70px;
         margin: 0 auto;
-        opacity: 0.5;
-        color:black;
-        font-size: 50px;
+        color:rgb(246, 234, 234);
+        font-size: 40px;
         text-align: center;
+    }
+    .tailin{
+        background-color: rgb(43, 13, 18);
+        opacity: 0.5;
+        width: 1080px;
+        height:70px;
+        margin-top: 10px;
+    }
+    .i:hover{
+        display: none;
+    }
+    .tailin:hover{
+        background-color: rgb(218, 173, 199);
+        opacity: 0.5;
+        transition: 1s;
     }
     .edu{
         width:450px;
@@ -167,7 +176,38 @@
         height:200px;
         margin: 0 auto;
         font-size: larger;
-        color:rgb(155, 72, 108);
+        color:rgb(249, 236, 242);
+    }
+    .workin{
+       background-color: rgb(71, 9, 27);
+       opacity: 0.5;
+       height:200px;
+    }
+    .workin:hover{
+        background-color: black;
+        transition: 2s;
+    }
+    .flo:hover{
+        display: none;
+        transition: 2s;
+    }
+    .hlast{
+        font-size: larger;
+        color:rgb(249, 236, 242);
+        text-align: center;
+        margin-top: 10px;
+    }
+    .circle2{
+        width: 100px;
+        height:101px;
+        background-color: rgb(236, 235, 234);
+        position: absolute;
+        top:1950px;
+        left:1000px;
+        color: black;
+        font-size: 35px;
+        text-align: center;
+        border-radius: 50%;
     }
 </style>
 <body>
@@ -211,13 +251,16 @@
                 <div class="item">就能遇上什么样的人</div>
                 <div class="item">所以我想，我一定是攒了足够的好运气，</div>
                 <div class="item">然后走在了一条对的路上</div>
-                <div class="item" id="selfcon">|芹菜还是菜</div>
+                <div class="item" id="t">|芹菜还是菜</div>
             </div>
         </div>
         <div class="right">
             <img src="cat.jpg" width="300px" height="200px">
+            <hr/>
             <div class="selfif">个人信息</div>
-            <img src="flo.png" width="100px" height="101px">
+            <div class="flo" id="flo">
+                <img src="flo.png" width="100px" height="101px" >
+            </div>
             <div class="ur">
                 <ul>
                     <li><b>性别：</b>女</li>
@@ -253,14 +296,29 @@
         </div>
     </div>
     <div class="work">
-        <strong>
+        <div class="workin" id="workin">
+            <strong>
 
-        <h3>工作经验...</h3>
-      <ol>
-        <li >本人已经成功安装搭建好visual studio code,Java SE,MySQL等软件</li>
-        <li >有两年打印输出“Hello World"的经验</li>
-    </strong>
+                <div class="hlast">
+                    <h8 style="align-items: center;">工作经验...</h8>
+                </div>
+              <ol>
+                <li >本人已经成功安装搭建好visual studio code,Java SE,MySQL等软件</li>
+                <li >有两年打印输出“Hello World"的经验</li>
+            </strong>
+            <div class="circle2" id="circlese">
+                <hc>工作经验</hc>
+            </div>
+        </div>
+        
     </div>
-    <div class="tail">谢谢观看</div>
+    <div class="tail">
+        <div class="tailin" id="tailin">
+            <strong>
+                <i id="i">谢谢观看</i> 
+            </strong>
+        </div>
+       
+    </div>
 </body>
 </html>

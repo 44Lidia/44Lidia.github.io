@@ -8,30 +8,34 @@
     <link rel="stylesheet" href="mvp.css">
     <style>
         a{
-            color:rgb(203, 207, 211);
-        }
+            color:rgb(248, 222, 226);}
     .container {
     width: 800px;
     margin: 0 auto;
     padding: 10px 20px;
     margin-top: 0;
-    background-image: url("bg4.jpg");
-    box-shadow: 5px 5px 5px #696161;
+    background-image: url("page1bg.jpg");
+    box-shadow: 5px 5px 5px #ede6e6;
 }
  form{
-    color:rgb(193, 199, 199);
+    color:rgb(248, 222, 226);
+    height: 960px;
 }
 </style>
 </head>
 <body>
     <style>
-        #sel:hover{
-            color:rgb(216, 215, 202)
+        .sel:hover{
+            color:rgb(248, 222, 226);
         }
-
+        .container:hover{
+            background-image: url("page2bg.jpg");
+            border-radius: 5%;
+            transition: 5s;
+        }
     </style>
    
-    <div class="container">
+    <div class="container" id="con">
     <form action="" method="post" id="fromlist" >
         昵称：<input type="text" placeholder="请输入您的昵称" ><br>
         密码：<input type="password" placeholder="请输入您的密码"><br>
