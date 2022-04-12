@@ -203,7 +203,7 @@
         margin-top: 10px;
     }
     .ol{
-        width: 10%;
+        width: 100%;
     }
     .circle2{
         width: 100px;
@@ -232,6 +232,15 @@
         }
         .tail{
             width:100%;
+        }
+        .flo{
+            display: none;
+        }
+        .circle{
+            display: none;
+        }
+        .circle2{
+            display: none;
         }
     }
 </style>
@@ -299,7 +308,7 @@
             <div class="edu">
                   教育背景
             </div>
-            <strong><table style="width:540px;font-size: 20px;">
+            <strong><table style="width:100%;font-size: 20px;">
                 <tr>
                   <td>时间</td>
                   <td>学校</td>
@@ -327,9 +336,10 @@
                 <div class="hlast">
                     <h8 style="align-items: center;">工作经验...</h8>
                 </div>
-              <ol>
+            </ol id="ol">
                 <li >本人已经成功安装搭建好visual studio code,Java SE,MySQL等软件</li>
                 <li >有两年打印输出“Hello World"的经验</li>
+            <ol>
             </strong>
             <div class="circle2" id="circlese">
                 <hc>工作经验</hc>
