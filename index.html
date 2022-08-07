@@ -4,359 +4,83 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>芹菜还是菜简历</title>
+    <title>我写的走马灯</title>
 </head>
 <style>
-    body {
-    padding: 0;
-    margin: 0 ;
-    }
-    .page1{
-        width:100%;
-        height:960px;
-        margin: 0 auto;
-        text-align: center;
-        background-image: url("page1bg.jpg");
-        font-size: medium;
-        overflow-y: scroll;
-    }
-    .headbox{
-        display: flex;
-        flex:auto;
-        margin:0 auto;
-        text-align: center;
-        width:100%;
-        height:600px;
-        background-image: url("page1head.jpg");
-    }
-    .title{
-        width:100%;
-        height:50px;
-        background-color: rgb(247, 216, 221);
-        opacity: 0.8;
-        margin-bottom: 10px;
-        font-size: 30px;
-        font-style: SThHupo;
-        text-shadow: 0 0 2px black;
-        color: rgb(236, 154, 173);
-    }
-    #title{
-        position: fixed;
-    }
-    .circle{
-        background-color: rgb(247, 216, 221);
-        opacity: 0.5;
+     * {
+        padding: 0;
+        margin: 0;
+      }
+    .img{
         width:200px;
-        height: 200px;
-        border-radius: 50%;
-        position: absolute;
-        top:500px;
-        left:650px;
-    }
-    .circle:hover{
-        background-image: url("ch.jpg");
-        width:200px;
-        height: 200px;
-        opacity: 1;
-        transition: 2s;
-    }
-    .links{
-        text-align: center;
-        margin-top: 200px;
-        color: rgb(238, 183, 208);
-        font-size: 30px;
-        border: 50;
-        opacity: 3;
-    }
-    a {
-    text-decoration: none;
-    text-shadow: 0 0 2px rgb(216, 212, 212);
-    color: rgb(182, 141, 177);
-    font-size: 30px;  
-    }  
-    .page2{
-        display: flex;
-        width:100%;
-        height:960px;
-        margin: 0 auto;
-        text-align: center;
-        background-image: url("page2bg.jpg");
-        font-size: medium;
-        flex:auto;
-    }
-    .left{
-        width: 50%;
-        height:950px;
-        background-color: rgb(43, 13, 18);
-        opacity: 0.5;
-        margin: 10px;
-        overflow-x: scroll;
-    }
-    .right{
-        width: 50%;
-        height:950px;
-        background-color: rgb(218, 173, 199);
-        opacity: 0.5;
-        margin: 10px;
-        overflow-x: scroll;
-    }
-    .p2lh{
         height:200px;
-        width:100%;
-        background-color:rgb(218, 173, 199) ;
-        border-radius: 30%;
     }
-    .p2lh:hover{
-        background-image:url("p2hl.png");
+    .box{
+        position: relative;
+        margin: 100px auto;
+        width:600px;
         height:200px;
-        border-radius:0;
-        transition: 2s;
-    }
-    .self{
-        height:50px;
-        
-        margin-top: 10px;
-        background-color: rgb(218, 173, 199);
+        border: 2px solid black;
         border-radius: 10%;
+        box-shadow: 2px 5px 15px;
+        overflow: hidden;
     }
-    .selfcon{
-        display: flex;
-        flex-direction: row;
-        width:50%;
-        height:400px ;
+    .box ul{
+        width:2300px;
+        list-style: none;
+        animation: move 10s linear infinite backwards;
     }
-    .item{
-        color: aliceblue;
-        margin: 30px;
-        font-size: large;
-        width: 5%;
+    li{
+        float:left;
     }
-    
-    .selfif{
-        width:100%;
-        height:40px;
-        margin: 60px 20px 20px;
-        background-color:rgb(26, 35, 41);
-        color: rgb(245, 237, 237);
-        font-size: 30px;
-    }
-    .ur{
-        width:100%;
-        color:rgb(14, 16, 17);
-        font-size: 20px;
-        text-align: left;
-    }
-    .tail{
-        background-image: url("page2bg.jpg");
-        width: 100%;
-        height:70px;
-        margin: 0 auto;
-        color:rgb(246, 234, 234);
-        font-size: 40px;
-        text-align: center;
-    }
-    .tailin{
-        background-color: rgb(43, 13, 18);
-        opacity: 0.5;
-        width: 100%;
-        height:70px;
-        margin-top: 10px;
-    }
-    .i:hover{
-        display: none;
-    }
-    .tailin:hover{
-        background-color: rgb(218, 173, 199);
-        opacity: 0.5;
-        transition: 1s;
-    }
-    .edu{
-        width:100%;
-        height:40px;
-        margin: 20px;
-        background-color:rgb(26, 35, 41);
-        color: rgb(245, 237, 237);
-        font-size: 30px;
-    }
-    .work{
-        background-image:url("work.jpg");
-        width: 100%;
-        height:200px;
-        margin: 0 auto;
-        font-size: larger;
-        color:rgb(249, 236, 242);
-    }
-    .workin{
-       background-color: rgb(71, 9, 27);
-       opacity: 0.5;
-       height:200px;
-    }
-    .workin:hover{
-        background-color: black;
-        transition: 2s;
-    }
-    .flo:hover{
-        display: none;
-        transition: 2s;
-    }
-    .hlast{
-        font-size: larger;
-        color:rgb(249, 236, 242);
-        text-align: center;
-        margin-top: 10px;
-    }
-    .ol{
-        width: 100%;
-    }
-    .circle2{
-        width: 100px;
-        height:101px;
-        background-color: rgb(236, 235, 234);
-        position: absolute;
-        top:1950px;
-        left:1000px;
-        color: black;
-        font-size: 35px;
-        text-align: center;
-        border-radius: 50%;
-    }
-    @media (max-width:660px) {
-        .page1{
-            width:100%;
+    @keyframes move{
+        to{
+            transform: translateX(-1400px);
+            /* 注意是负的，要回走 ,而且是7张，不是10张的长度*/
         }
-        .page2{
-            width:100%;
-        }
-        .item{
-            margin:10px;
-        }
-        .work{
-            width:100%
-        }
-        .tail{
-            width:100%;
-        }
-        .flo{
-            display: none;
-        }
-        .circle{
-            display: none;
-        }
-        .circle2{
-            display: none;
-        }
+    }
+    .box:hover ul{
+        animation-play-state: paused;
     }
 </style>
 <body>
-    <div class="page1">
-        <div class="title" id="title">芹菜的简历</div>
-        <div class="headbox">
-        </div>
-        <div class="circle" id="circle">
-            <h1 style="align-items: center;color: black;font-size: 50px;">简历</h1>
-            <h2 style="align-items: center;font-size: 30px;">芹菜</h2>
-        </div>
-        <div class="links">
-            <h3>
-                <a href="还原学校网页布局.html">还原学校官网布局</a>
-            </h3>
-            <h4>
-                <a href="form.html">表单链接</a>
-            </h4>
-        </div>
-    </div>
-    <div class="page2">
-        <div class="left">
-            <div class="p2lh" id="p2lh">
-                <h5 style="font-size: 30px;">
-                    个人简历
-                </h5>
-                <h6 style="font-size: 15px;">
-                    No matter how sad you are, just believe happiness is waiting
-                </h6>
-            </div>
-            <hr/>
-            <div class="self">
-                <h7 style="font-size: 25px;">自我介绍</h7>
-            </div>
-            <hr/>
-            <div class="selfcon" >
-                <div class="item">我这个人很固执,</div>
-                <div class="item">比如我固执地相信</div>
-                <div class="item">相遇需要好运气。</div>
-                <div class="item">再比如我相信，你是什么样的人，</div>
-                <div class="item">就能遇上什么样的人</div>
-                <div class="item">所以我想，我一定是攒了足够的好运气，</div>
-                <div class="item">然后走在了一条对的路上</div>
-                <div class="item" id="t">|芹菜还是菜</div>
-            </div>
-        </div>
-        <div class="right">
-            <img src="cat.jpg" width="300px" height="200px">
-            <hr/>
-            <div class="selfif">个人信息</div>
-            <div class="flo" id="flo">
-                <img src="flo.png" width="100px" height="101px" >
-            </div>
-            <div class="ur">
-                <ul>
-                    <li><b>性别：</b>女</li>
-                    <li><b>电话：</b>4025252</li>
-                    <li><b>邮箱：</b>12345678@没有邮箱.com</li>
-                    <li><b>生日：</b>2022.09.21</li>
-                    <li><b>兴趣：</b>给公司买命</li>
-                </ul>
-            </div>
-            <hr/>
-            <div class="edu">
-                  教育背景
-            </div>
-            <strong><table style="width:100%;font-size: 20px;">
-                <tr>
-                  <td>时间</td>
-                  <td>学校</td>
-                  <td>职务</td>
-                </tr>
-                <tr>
-                  <td>2020-2024</td>
-                  <td>SUIBE</td>
-                  <td>勤勤恳恳的大学生</td>
-                </tr>
-                <tr>
-                  <td>2024-....</td>
-                  <td>家里蹲大学</td>
-                  <td>社畜</td>
-                </tr>
-              </table>  
-            </strong>
-            </div>
-        </div>
-    </div>
-    <div class="work">
-        <div class="workin" id="workin">
-            <strong>
+    <div class="box">
+        <ul>
+            <a href="https://www.bilibili.com/video/BV1FW4y1r79Q?spm_id_from=333.999.0.0&vd_source=a75f23efbd99561a9f2777d0a1bbebb1">
+                <li><img class="img" src="./images/a.jpg" alt=""></li>
+            </a>
+            <a href="https://www.bilibili.com/video/BV1uW4y1y7WE?spm_id_from=333.999.0.0&vd_source=a75f23efbd99561a9f2777d0a1bbebb1">
+                <li><img class="img" src="./images/b.jpg" alt=""></li>
+            </a>
+            <a href="https://www.bilibili.com/video/BV12U4y1R72G?spm_id_from=333.999.0.0&vd_source=a75f23efbd99561a9f2777d0a1bbebb1">
+                <li><img class="img" src="./images/c.jpg" alt=""></li>
+            </a>
+            <a href="https://www.bilibili.com/video/BV1x34y1E77j?spm_id_from=333.999.0.0&vd_source=a75f23efbd99561a9f2777d0a1bbebb1">
+                <li><img class="img" src="./images/d.jpg" alt=""></li>
+            </a>
+            <a href="https://www.bilibili.com/video/BV1pZ4y1477h?spm_id_from=333.999.0.0&vd_source=a75f23efbd99561a9f2777d0a1bbebb1">
+                <li><img class="img" src="./images/e.jpg" alt=""></li>
+            </a>
+            <a href="https://www.bilibili.com/video/BV1rA4y1S7KL?spm_id_from=333.999.0.0&vd_source=a75f23efbd99561a9f2777d0a1bbebb1">
+                <li><img class="img" src="./images/g.jpg" alt=""></li>
+            </a>
+            <a href="https://www.bilibili.com/video/BV1bU4y1273p?spm_id_from=333.999.0.0&vd_source=a75f23efbd99561a9f2777d0a1bbebb1">
+                <li><img class="img" src="./images/f.jpg" alt=""></li>
+            </a>
 
-                <div class="hlast">
-                    <h8 style="align-items: center;">工作经验...</h8>
-                </div>
-            </ol id="ol">
-                <li >本人已经成功安装搭建好visual studio code,Java SE,MySQL等软件</li>
-                <li >有两年打印输出“Hello World"的经验</li>
-            <ol>
-            </strong>
-            <div class="circle2" id="circlese">
-                <hc>工作经验</hc>
-            </div>
-        </div>
-        
-    </div>
-    <div class="tail">
-        <div class="tailin" id="tailin">
-            <strong>
-                <i id="i">谢谢观看</i> 
-            </strong>
-        </div>
-       
+            <!-- 因为无缝动画就是得让人无法识别开头，把开头三个产品图复制在尾部
+            因为显示区域就是三个产品图 -->
+
+            <a href="https://www.bilibili.com/video/BV1FW4y1r79Q?spm_id_from=333.999.0.0&vd_source=a75f23efbd99561a9f2777d0a1bbebb1">
+                <li><img class="img" src="./images/a.jpg" alt=""></li>
+            </a>
+            <a href="https://www.bilibili.com/video/BV1uW4y1y7WE?spm_id_from=333.999.0.0&vd_source=a75f23efbd99561a9f2777d0a1bbebb1">
+                <li><img class="img" src="./images/b.jpg" alt=""></li>
+            </a>
+            <a href="https://www.bilibili.com/video/BV12U4y1R72G?spm_id_from=333.999.0.0">
+                <li><img class="img" src="./images/c.jpg" alt=""></li>
+            </a>
+        </ul>
     </div>
 </body>
 </html>
